@@ -12,3 +12,14 @@ input.searchInput{
     width: 50%;
     margin-left: 25%;
 }
+div.answerSection{
+    width: 50%;
+    padding-left: 25%;
+    padding-top: 25px;
+    text-align: center;
+}
+img.weatherImg{
+    position: relative;
+    padding-left: 25%;
+    padding-top: 25px;
+}

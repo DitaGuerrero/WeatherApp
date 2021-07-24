@@ -1,4 +1,4 @@
-GET http://dataservice.accuweather.com/locations/v1/cities/search?apikey={{apiKey}}&q={{city}}
+GET http://dataservice.accuweather.com/locations/v1/cities/search?apikey={{apiKey}}&q=Habana%20Cuba
 Accept: application/json
 
 ###
