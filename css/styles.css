@@ -1,0 +1,14 @@
+h1.title{
+    padding-top: 10%;
+    color: cadetblue;
+}
+p.label{
+    color: grey;
+}
+input.searchInput{
+    border-radius: 5px;
+    box-shadow: 5px 5px grey;
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+}
