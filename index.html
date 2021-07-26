@@ -2,25 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Api Weather</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<h1 class=" title text-center">Weather App</h1>
-	<p class="label text-center">Enter a location for weather information</p>
-	<div class="searchSection">
-		<form>
-		<label>
-			<input class="searchInput" type="text">
-		</label>
-	</form>
+	<div class="container text-center mt-3">
+		<h1 class="mt-3">Weather App</h1>
+		<p>Enter a location for weather information</p>
+		<form class="col-12">
+			<input class="searchInput col-12 col-md-6" type="text">
+		</form>
 	</div>
-	<div class="answerSection">
-	
+	<div id="wrapper" class="d-flex text-center justify-content-center mt-3 mb-3">
 	</div>
 	<script src="js/apiRequests.js"></script>
 	<script src="js/appScript.js"></script>
-
 </body>
 </html>

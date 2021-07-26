@@ -1,8 +1,13 @@
 const form = document.querySelector("form");
-const answerSection = document.querySelector("div.answerSection");
 
 //Create weather cards with current conditions
-const createWeatherTemplate = (city, weather, answerSection) => {
+const createWeatherTemplate = (city, weather) => {
+    //Div Card
+    const answerSection = document.createElement("div");
+    answerSection.classList.add("answerSection");
+    answerSection.classList.add("card");
+    answerSection.classList.add("col-11");
+    answerSection.classList.add("col-md-5");
     answerSection.innerHTML = "";
 
     //Image background
@@ -11,11 +16,11 @@ const createWeatherTemplate = (city, weather, answerSection) => {
         : "./img/night.svg";
     const weatherImgBackground = document.createElement("img");
     weatherImgBackground.setAttribute("src", imgBackgroundUrl);
-    weatherImgBackground.classList.add("weatherImgBackground");
+    weatherImgBackground.classList.add("card-img");
 
     //Icon selection
     const weatherImg = document.createElement("img");
-    let iconUrl = `./img/icons/${weather.WeatherIcon}.svg`;
+    let iconUrl = `./img/icons/${weather.WeatherIcon}-s.png`;
     weatherImg.setAttribute("src", iconUrl);
     weatherImg.classList.add("weatherImg");
 
@@ -31,6 +36,12 @@ const createWeatherTemplate = (city, weather, answerSection) => {
     const temperature = document.createElement("h2");
     temperature.innerHTML = `${weather.Temperature.Metric.Value} &deg C`;
 
+    //Erase every content in the div wrapper where will be the weather info
+    const wrapper = document.getElementById("wrapper");
+    wrapper.innerHTML = "";
+
+    //Adding all elements to the document
+    wrapper.appendChild(answerSection);
     answerSection.appendChild(weatherImgBackground);
     answerSection.appendChild(weatherImg);
     answerSection.appendChild(cityName);
@@ -45,11 +56,7 @@ form.addEventListener("submit", async (e) => {
     try {
         firstCity = await getKeyFromFirstCity(e.target[0].value);
         weatherDetails = await getDataByCityId(firstCity.Key);
-        createWeatherTemplate(
-            firstCity,
-            weatherDetails,
-            answerSection
-        );
+        createWeatherTemplate(firstCity, weatherDetails);
     } catch (e) {
         console.log(e);
     }

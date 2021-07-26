@@ -1,25 +1,19 @@
 h1.title{
-    padding-top: 10%;
     color: cadetblue;
 }
+
 p.label{
     color: grey;
 }
 input.searchInput{
     border-radius: 5px;
-    box-shadow: 5px 5px grey;
-    position: absolute;
-    width: 50%;
-    margin-left: 25%;
+    box-shadow: 2px 2px grey;
 }
 div.answerSection{
-    width: 50%;
-    padding-left: 25%;
-    padding-top: 25px;
-    text-align: center;
+        box-shadow: 2px 2px grey;
 }
 img.weatherImg{
-    position: relative;
-    padding-left: 25%;
-    padding-top: 25px;
+    position: absolute;
+    width: 90%;
+    margin-top: 15%;
 }
